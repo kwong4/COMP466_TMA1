@@ -1,0 +1,50 @@
+<?xml version = "1.0"?>
+
+<tutorial>
+	<units>
+		<unit>
+			<title>Unit 1: Web, HTML5, and CSS</title>
+			<section>
+				<sectiontitle>What is HTML5?</sectiontitle>
+				<description>HTML5 is a markup language that specififes the structure and content of documents that are displayed in web browsers. It is often coded in basic text-editors. HTML5 have 2 main components within its inital html element called head and body. In HTML5 documents, elements are delimited with a start and end tag. For example &#60;html&#62;&#60;&#47;html&#62; defines an html tag. The element is defined by its name (html) within less than and greater than signs. The end delimiter can be noted with a slash in front of the ending element (but still within the signs). Between the start and end tags, you are able to put content. Depending on the element tag, HTML interprets with it differently.
+				</description>
+			</section>
+			<section>
+				<sectiontitle>Basic Elements of HTML</sectiontitle>
+				<description>There are many different kinds of elements in html. We will be only going through some of them as there are too many to cover. First off there is the Paragraph Element denoted as &#60;p&#62;&#60;&#47;p&#62;. This element, like many elements in HTML5 are often predictable in purpose from its name. The Paragraph element forms a paragraph which places extra space above and below it. 
+				</description>
+				<description>The next element is the anchor element denoted as &#60;a href=""&#62;&#60;&#47;a&#62;. This element defines a hyperlink, and uses an attribute called href defined in its start tag as the destination of the hyperlink. The text inbetween the start and end tags are the visible content that is clickable to the user.
+				</description>
+				<description>The next element is the image element denoted as &#60;img src=""&#62;&#60;. This element defines a image and uses an attributed (like the anchor element) called src to denote the source of the image. However this element does not need an end tag like the others because it simply does not have a need for it as it pulls its content from the attributes. Another attribute to note of this element is the alt attribute which defines an alternate image if the source (src) is unable to be loaded.
+				</description>
+			</section>
+			<section>
+				<sectiontitle>Lists and Tables</sectiontitle>
+				<description>There are two main types of lists in HTML5. There are ordered lists denoted as &#60;ol&#62;&#60;&#47;ol&#62; and there are unordered lists denoted as &#60;ul&#62;&#60;&#47;ul&#62;. The difference is that ordered lists will represent an increasing or decreasing manner of each marked list item. However, unordered lists just represent their list items as undefined points (ex. bullets or dashes). In either case the content of each list requires another element called list item denoted as &#60;li&#62;&#60;&#47;li&#62;. List items define the points for each list, and their content define what text each point will respresent.
+				</description>
+				<description>Tables are one of the original ways to represent data. In HTML5, a table is denoted as &#60;table&#62;&#60;&#47;table&#62; and has 3 distinct sections called head, body, and foot. The head section denoted as &#60;thead&#62;&#60;&#47;thead&#62; defines header column information. The body section denoted as &#60;tbody&#62;&#60;&#47;tbody&#62; defines the primary data of the table. Finally the foot section denoted as &#60;tfoot&#62;&#60;&#47;tfoot&#62; defines the footer of the table.
+				</description>
+				<description>Each of the main 3 sections use &#60;tr&#62;&#60;&#47;tr&#62; to define a row, which must be between the start and end tags of each section. Furthermore, for each row columns can be define in a similar fashion (between tags). However, the thead and the tfoot both use &#60;th&#62;&#60;&#47;th&#62; to define columns (called header columns) while the tbody uses &#60;td&#62;&#60;&#47;td&#62; to define column data.
+				</description>
+			</section>
+			<section>
+				<sectiontitle>Lists and Tables</sectiontitle>
+				<description>There are two main types of lists in HTML5. There are ordered lists denoted as &#60;ol&#62;&#60;&#47;ol&#62; and there are unordered lists denoted as &#60;ul&#62;&#60;&#47;ul&#62;. The difference is that ordered lists will represent an increasing or decreasing manner of each marked list item. However, unordered lists just represent their list items as undefined points (ex. bullets or dashes). In either case the content of each list requires another element called list item denoted as &#60;li&#62;&#60;&#47;li&#62;. List items define the points for each list, and their content define what text each point will respresent.
+				</description>
+				<description>Tables are one of the original ways to represent data. In HTML5, a table is denoted as &#60;table&#62;&#60;&#47;table&#62; and has 3 distinct sections called head, body, and foot. The head section denoted as &#60;thead&#62;&#60;&#47;thead&#62; defines header column information. The body section denoted as &#60;tbody&#62;&#60;&#47;tbody&#62; defines the primary data of the table. Finally the foot section denoted as &#60;tfoot&#62;&#60;&#47;tfoot&#62; defines the footer of the table.
+				</description>
+				<description>Each of the main 3 sections use &#60;tr&#62;&#60;&#47;tr&#62; to define a row, which must be between the start and end tags of each section. Furthermore, for each row columns can be define in a similar fashion (between tags). However, the thead and the tfoot both use &#60;th&#62;&#60;&#47;th&#62; to define columns (called header columns) while the tbody uses &#60;td&#62;&#60;&#47;td&#62; to define column data.
+				</description>
+			</section>
+			<section>
+				<sectiontitle>Attributes</sectiontitle>
+				<description>As we briefly mentioned earlier, elements in HTML5 can carry attributes in their elements. Attributes are very useful in defining how HTML5 handles presents and manages certain elements. One specific attribute called style 
+				</description>
+				<description>
+				</description>
+				<description>
+				</description>
+			</section>
+		</unit>
+	</units>
+</tutorial>
