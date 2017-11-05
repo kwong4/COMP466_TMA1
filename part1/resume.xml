@@ -1,0 +1,160 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "resume.xsl"?>
+
+<!-- COMP466 Assignment 1: Part 1 - resume.xml	-->
+<!-- Name: Kevin Wong							-->
+<!-- ID: 3339323								-->
+<comp466kw:resume xmlns:comp466kw = "urn:comp466kw:part1">
+	<generalinfo>
+		<name>
+			<firstname>Kevin</firstname>
+			<lastname>Wong</lastname>
+		</name>
+		<address>
+			<housenumber>11938</housenumber>
+			<streetnumber>57</streetnumber>
+			<city>Edmonton</city>
+			<province>Alberta</province>
+			<postalcode>T5W 3V6</postalcode>
+		</address>
+		<phonenumber>780-885-3578</phonenumber>
+		<email>kwong4@ualberta.ca</email>
+	</generalinfo>
+	<academicinfo>
+		<postsecondaryeducation>
+			<university>University of Alberta</university>
+			<degree>Computer Engineering, BSc</degree>
+			<graduationyear>2018</graduationyear>
+			<gradepointaverage>3.7</gradepointaverage>
+		</postsecondaryeducation>
+		<educationalachievements>
+			<educationalaward>
+				<awardtitle>University of Alberta Undergraduate Scholarship</awardtitle>
+				<awardyear>2017</awardyear>
+			</educationalaward>
+			<educationalaward>
+				<awardtitle>Jason Lang Scholarship</awardtitle>
+				<awardyear>2016-2017</awardyear>
+			</educationalaward>
+			<educationalaward>
+				<awardtitle>University of Alberta Entrance Scholarship</awardtitle>
+				<awardyear>2013</awardyear>
+			</educationalaward>
+			<educationalaward>
+				<awardtitle>E.R. Probert Award</awardtitle>
+				<awardyear>2013-2017</awardyear>
+			</educationalaward>
+			<educationalaward>
+				<awardtitle>Alexander Rutherford Scholarship</awardtitle>
+				<awardyear>2011-2013</awardyear>
+			</educationalaward>
+		</educationalachievements>
+		<computerexperience>
+			<cmpexperience>Proficient with C, C++, Java, Python, Coldfire Assembly, Matlab, and SQL languages</cmpexperience>
+			<cmpexperience>Experience with Visual Studio, Android Studio, HTML, CSS, JavaScript, and XML</cmpexperience>
+			<cmpexperience>Experience with developing android apps in a collaborative dynamic team environment</cmpexperience>
+			<cmpexperience>Experience with Microsoft SSRS design, SSMS, VSTS, and web design</cmpexperience>
+			<cmpexperience>Knowledgeable in a multitude of data structures, design patterns, algorithms and OS concepts</cmpexperience>
+			<cmpexperience>Experience with Active Directory, Version Control (GitHub), and CAD tools (Cadence)</cmpexperience>
+			<cmpexperience>Experience with Virtual machines, VMware, and Linux-operating systems</cmpexperience>
+			<cmpexperience>Experience with Electrical circuits, Architecture, IC design, verification and testing</cmpexperience>
+			<cmpexperience>Experience with Netburner, Arduino hardware, Eclipse, and object orientated programming</cmpexperience>
+		</computerexperience>
+	</academicinfo>
+	<workexperience>
+		<experience>
+			<companyname>PCL Constructors Inc</companyname>
+			<city>Edmonton</city>
+			<province>AB</province>
+			<startdate>May 2017</startdate>
+			<enddate>Present</enddate>
+			<title>Software Developer Student</title>
+			<responsibilities>
+				<responsibility>Helped maintain, design, and improve the Safety Management Centre (SMC) which housed all the safety related data and reports in the company</responsibility>
+				<responsibility>Designed and migrated several SSRS reports to a new database schema which included ETL (Extract, Transfer, and Load), testing, debugging, and coding Stored Procedures in TSQL</responsibility>
+				<responsibility>Participated and Presented in many daily SCRUM and weekly PBI meetings</responsibility>
+				<responsibility>Deployed, tested, and managed different environments for monthly roll-outs of updates</responsibility>
+				<responsibility>Provided requirement analysis, estimation, and agile development in many PBIs</responsibility>
+				<responsibility>Analyzed, coded, and debugged Web forms, scripts, and configuration files</responsibility>
+			</responsibilities>
+		</experience>
+		<experience>
+			<companyname>IBM Canada Ltd</companyname>
+			<city>Toronto</city>
+			<province>ON</province>
+			<startdate>January</startdate>
+			<enddate>August 2016</enddate>
+			<title>Data Scientist</title>
+			<responsibilities>
+				<responsibility>Researched, developed, and produced multiple technical courses for Big Data University involving Machine Learning, Spark, HBase, Hadoop, and notebooks.</responsibility>
+				<responsibility>Completed and obtained many different certificates and badges on technical areas involving Big Data on Big Data University. (Hadoop, MapReduce and YARN, Pig, Spark, and HBase)</responsibility>
+				<responsibility>Updated, tested, and verified courses for software updates and cloud environment deployment</responsibility>
+				<responsibility>Communicated in weekly scrum meetings to problem solve and tackle technical roadblocks</responsibility>
+				<responsibility>Developed, debugged, and coded with multiple open-source frameworks and libraries</responsibility>
+			</responsibilities>
+		</experience>
+		<experience>
+			<companyname>Shared Services Canada</companyname>
+			<city>Edmonton</city>
+			<province>AB</province>
+			<startdate>May</startdate>
+			<enddate>August 2015</enddate>
+			<title>Informatics Assistant</title>
+			<responsibilities>
+				<responsibility>Researched, discovered and applied solutions to resolve a multitude of diverse technical issues reported through HP Service Manager 7</responsibility>
+				<responsibility>Assisted in Asset Management by tracking, recording, and updating data entry forms into the Asset Centre Database in a fast, efficient, and organized manner</responsibility>
+				<responsibility>Daily monitoring and assigning of Incidents and Quotes tickets in management system</responsibility>
+				<responsibility>Interacted with clients by providing weekly coverage on the Western Region Service Desk</responsibility>
+				<responsibility>Managed, regulated, and operated a multitude of user and procedural databases</responsibility>
+			</responsibilities>
+		</experience>
+		<experience>
+			<companyname>MCDONALDS</companyname>
+			<city>Edmonton</city>
+			<province>AB</province>
+			<startdate>Nov. 2010</startdate>
+			<enddate>Oct. 2013</enddate>
+			<title>Team Leader</title>
+			<responsibilities>
+				<responsibility>Managed 10-25 staff while assigning objectives and goals</responsibility>
+				<responsibility>Responsible for specific station training and orientating new employees</responsibility>
+				<responsibility>Regulated staff and ensured quality assurance of food and cleanliness</responsibility>
+				<responsibility>Maintained a strong positive communication between co-workers and customers with a professional attitude</responsibility>
+				<responsibility>Received “Outstanding Customer Service Award of the Year and Employee of the Month”</responsibility>
+			</responsibilities>
+		</experience>
+	</workexperience>
+	<additionalinfo>
+		<volunteeractivities>
+			<volunteerexperience>
+				<title>University of Alberta Week of Welcome Volunteer</title>
+				<date>2015, 2017</date>
+			</volunteerexperience>
+			<volunteerexperience>
+				<title>Orientation Leader for University of Alberta Orientation</title>
+				<date>2014-2015</date>
+			</volunteerexperience>
+			<volunteerexperience>
+				<title>University of Alberta ESS Career Fair Volunteer</title>
+				<date>2015</date>
+			</volunteerexperience>
+			<volunteerexperience>
+				<title>University of Alberta Open House Volunteer</title>
+				<date>2014</date>
+			</volunteerexperience>
+			<volunteerexperience>
+				<title>University of Alberta Engineering Expo Volunteer</title>
+				<date>2014</date>
+			</volunteerexperience>
+			<volunteerexperience>
+				<title>Tutored students with Study Buddy Program</title>
+				<date>2013-2014</date>
+			</volunteerexperience>
+		</volunteeractivities>
+		<other>
+			<otherinfo>Completed CSTS-09 Online Safety Course</otherinfo>
+			<otherinfo>Class 5 GDL driver’s license with clean driver’s abstract</otherinfo>
+			<otherinfo>Standard First Aid CPR/AED Level C</otherinfo>
+		</other>
+	</additionalinfo>
+</comp466kw:resume>

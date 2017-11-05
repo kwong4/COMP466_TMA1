@@ -1,0 +1,16 @@
+/* COMP466 Assignment 1: styles.css
+Name: Kevin Wong
+ID: 3339323 */
+/* External style sheet */
+body { 
+	font-family: arial, helvetica, sans-serif; 
+	margin-left: 4ex;
+}
+
+div.tabbed {
+	margin-left: 5ex;
+}
+
+ul li {
+	padding: 1ex
+}

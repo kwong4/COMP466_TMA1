@@ -1,0 +1,138 @@
+<?xml version = "1.0"?>
+
+<!-- COMP466 Assignment 1: Part 1 - resume.xsd	-->
+<!-- Name: Kevin Wong							-->
+<!-- ID: 3339323								-->
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	xmlns:comp466kw = "urn:comp466kw:part1"    
+   	targetNamespace = "urn:comp466kw:part1">
+
+   	<element name = "resume" type =  "comp466kw:ResumeType"/>
+
+   	<complexType name = "ResumeType">
+   		<sequence>
+   			<element name = "generalinfo" type = "comp466kw:GeneralInfoType"/>
+   			<element name = "academicinfo" type = "comp466kw:AcademicInfoType"/>
+   			<element name = "workexperience" type = "comp466kw:WorkExperienceType"/>
+   			<element name = "additionalinfo" type = "comp466kw:AdditionalInfoType"/>
+   		</sequence>
+   	</complexType>
+
+   	<complexType name = "GeneralInfoType">
+   		<sequence>
+   			<element name = "name" type = "comp466kw:NameType"/>
+   			<element name = "address" type = "comp466kw:AddressType"/>
+   			<element name = "phonenumber" type = "string"/>
+   			<element name = "email" type = "string"/>
+   		</sequence>
+   	</complexType>
+
+   	<complexType name = "NameType">
+   		<sequence>
+   			<element name = "firstname" type = "string"/>
+   			<element name = "lastname" type = "string"/>
+   		</sequence>
+   	</complexType>
+
+   	<complexType name = "AddressType">
+   		<sequence>
+   			<element name = "housenumber" type = "string"/>
+   			<element name = "streetnumber" type = "string"/>
+   			<element name = "city" type = "string"/>
+   			<element name = "province" type = "string"/>
+   			<element name = "postalcode" type = "string"/>
+   		</sequence>
+   	</complexType>
+
+	<complexType name = "AcademicInfoType">
+		<sequence>
+			<element name = "postsecondaryeducation" type = "comp466kw:PostSecondaryType"/>
+			<element name = "educationalachievements" type = "comp466kw:EducationalAchievementsType"/>
+			<element name = "computerexperience" type = "comp466kw:ComputerExperienceType"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "PostSecondaryType">
+		<sequence>
+			<element name = "university" type = "string"/>
+			<element name = "degree" type = "string"/>
+			<element name = "graduationyear" type = "int"/>
+			<element name = "gradepointaverage" type = "decimal"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "EducationalAchievementsType">
+		<sequence>
+			<element name = "educationalaward" type = "comp466kw:AwardType"
+				minOccurs = "1" maxOccurs = "unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "AwardType">
+		<sequence>
+			<element name = "awardtitle" type = "string"/>
+			<element name = "awardyear" type = "string"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "ComputerExperienceType">
+		<sequence>
+			<element name = "cmpexperience" type = "string"
+				minOccurs = "1" maxOccurs = "unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "WorkExperienceType">
+		<sequence>
+			<element name = "experience" type = "comp466kw:ExperienceType"
+				minOccurs = "1" maxOccurs = "unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "ExperienceType">
+		<sequence>
+			<element name = "companyname" type = "string"/>
+			<element name = "city" type = "string"/>
+			<element name = "province" type = "string"/>
+			<element name = "startdate" type = "string"/>
+			<element name = "enddate" type = "string"/>
+			<element name = "title" type = "string"/>
+			<element name = "responsibilities" type = "comp466kw:ResponsibilitiesType"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "ResponsibilitiesType">
+		<sequence>
+			<element name = "responsibility" type = "string"
+				minOccurs = "1" maxOccurs = "unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "AdditionalInfoType">
+		<sequence>
+			<element name = "volunteeractivities" type = "comp466kw:VolunteerActivitiesType"/>
+			<element name = "other" type = "comp466kw:OtherType"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "VolunteerActivitiesType">
+		<sequence>
+			<element name = "volunteerexperience" type = "comp466kw:VolunteerExperienceType"
+				minOccurs = "1" maxOccurs = "unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "VolunteerExperienceType">
+		<sequence>
+			<element name = "title" type = "string"/>
+			<element name = "date" type = "string"/>
+		</sequence>
+	</complexType>
+
+	<complexType name = "OtherType">
+		<sequence>
+			<element name = "otherinfo" type = "string"
+				minOccurs = "1" maxOccurs = "unbounded"/>
+		</sequence>
+	</complexType>
+</schema>
