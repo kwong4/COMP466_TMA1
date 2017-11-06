@@ -2,9 +2,55 @@
 Name: Kevin Wong
 ID: 3339323 */
 /* External style sheet */
+
 body { 
+	font-family: arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.resume { 
 	font-family: arial, helvetica, sans-serif; 
 	margin-left: 4ex;
+}
+
+.navigation {
+	background-color: #ffffff;
+	color: #000000;
+	list-style: none;
+	text-align: right;
+	padding: 3ex 0 3ex 0;
+}
+
+.navigation > li {
+	display:inline-block;
+	padding: 0 3ex 0 3ex;
+	font-size: 3ex;
+}
+
+.navigation > li:last-child {
+	display: inline-block;
+	padding: 0 6ex 0 3ex;
+	font-size: 3ex;
+}
+
+.navigation > li:hover {
+	color: #00FFFF;
+}
+
+.title {
+	color: #000000;
+	float: left;
+	font-size: 4ex;
+	font-style: bold;
+	padding-left: 2ex;
+	padding-top: 0ex;
+}
+
+.banner {
+	width: 100%;
+	display: block;
+	float: left;
 }
 
 div.tabbed {

@@ -24,7 +24,7 @@
    			<title><xsl:value-of select = "generalinfo/name/firstname"/>&#160;<xsl:value-of select = "generalinfo/name/lastname"/> - Resume</title>
    		</head>
 
-   		<body>
+   		<body class = "resume">
    			<h1><xsl:value-of select = "generalinfo/name/firstname"/>&#160;<xsl:value-of select = "generalinfo/name/lastname"/></h1>
    			<div class = "tabbed">
 	   			<p><xsl:value-of select = "generalinfo/address/housenumber"/>&#160;<xsl:value-of select = "generalinfo/address/streetnumber"/>ST</p>
