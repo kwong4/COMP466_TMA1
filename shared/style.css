@@ -61,5 +61,13 @@ div.tabbed {
 }
 
 ul li {
-	padding: 1ex
+	padding: 1ex;
+}
+
+.section_title {
+	padding-left: 3ex;
+}
+
+.description_para {
+	padding-left: 7ex;
 }

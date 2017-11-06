@@ -55,6 +55,7 @@ function processResponse() {
 			var unit = units[i].children;
 
 			section_title.id = "sectiontitle_" + i;
+			section_title.setAttribute("class", "section_title");
 			section_title.innerHTML = unit[0].innerHTML;
 
 			output.appendChild(section_title);
@@ -65,6 +66,7 @@ function processResponse() {
 				var description_entry = document.createElement("p");
 
 				description_entry.id = "p_" + i;
+				description_entry.setAttribute("class", "description_para");
 				description_entry.innerHTML = unit[j].innerHTML;
 
 				output.appendChild(description_entry);

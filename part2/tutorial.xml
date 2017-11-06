@@ -6,7 +6,7 @@
 			<title>Unit 1: Web, HTML5, and CSS</title>
 			<section>
 				<sectiontitle>What is HTML5?</sectiontitle>
-				<description>HTML5 is a markup language that specififes the structure and content of documents that are displayed in web browsers. It is often coded in basic text-editors. HTML5 have 2 main components within its inital html element called head and body. In HTML5 documents, elements are delimited with a start and end tag. For example &#60;html&#62;&#60;&#47;html&#62; defines an html tag. The element is defined by its name (html) within less than and greater than signs. The end delimiter can be noted with a slash in front of the ending element (but still within the signs). Between the start and end tags, you are able to put content. Depending on the element tag, HTML interprets with it differently.
+				<description>HTML5 is a markup language that specifies the structure and content of documents that are displayed in web browsers. It is often coded in basic text-editors. HTML5 have 2 main components within its inital html element called head and body. In HTML5 documents, elements are delimited with a start and end tag. For example &#60;html&#62;&#60;&#47;html&#62; defines an html tag. The element is defined by its name (html) within less than and greater than signs. The end delimiter can be noted with a slash in front of the ending element (but still within the signs). Between the start and end tags, you are able to put content. Depending on the element tag, HTML interprets with it differently.
 				</description>
 			</section>
 			<section>
@@ -15,7 +15,7 @@
 				</description>
 				<description>The next element is the anchor element denoted as &#60;a href=""&#62;&#60;&#47;a&#62;. This element defines a hyperlink, and uses an attribute called href defined in its start tag as the destination of the hyperlink. The text inbetween the start and end tags are the visible content that is clickable to the user.
 				</description>
-				<description>The next element is the image element denoted as &#60;img src=""&#62;&#60;. This element defines a image and uses an attributed (like the anchor element) called src to denote the source of the image. However this element does not need an end tag like the others because it simply does not have a need for it as it pulls its content from the attributes. Another attribute to note of this element is the alt attribute which defines an alternate image if the source (src) is unable to be loaded.
+				<description>The next element is the image element denoted as &#60;img src=""&#62;. This element defines a image and uses an attributed (like the anchor element) called src to denote the source of the image. However this element does not need an end tag like the others because it simply does not have a need for it as it pulls its content from the attributes. Another attribute to note of this element is the alt attribute which defines an alternate image if the source (src) is unable to be loaded.
 				</description>
 			</section>
 			<section>
@@ -41,7 +41,7 @@
 			<title>Unit 2: Client side Scripting in JavaScript</title>
 			<section>
 				<sectiontitle>What is JavaScript?</sectiontitle>
-				<description>JavaScript is a cross-platform object-oriented scripting language that is used to enhance the functionality and appearance of web pages. Similar to CSS documents, you are able to embed them into the HTML5 document itself or as an external file. To embed a document into a HTML5 document, you define it as &#60;script type = "text&#47;javascript" &#62;&#60;&#47;script&#62; within the head of the HTML5 document. Otherwise you are able to define an external JavaScript file as &#60;script src = "test.js" &#62;&#60;&#47;script&#62; within the head of the HTML5 document. JavaScript is extremely important and useful to add a dynamic component to your web applications. One important thing to note that JavaScript referred to as a loosely typed language, which means that JavaScript does not have specific type definitions.
+				<description>JavaScript is a cross-platform object-oriented scripting language that is used to enhance the functionality and appearance of web pages. Similar to CSS documents, you are able to embed them into the HTML5 document itself or as an external file. To embed a document into a HTML5 document, you define it as &#60;script type = "text&#47;javascript" &#62;&#60;&#47;script&#62; within the head of the HTML5 document. Otherwise you are able to define an external JavaScript file as &#60;script src = "test.js" &#62;&#60;&#47;script&#62; within the head of the HTML5 document. JavaScript is extremely important and useful to add a dynamic component to your web applications. One important thing to note that JavaScript is referred to as a loosely typed language, which means that JavaScript does not have specific type definitions.
 				</description>
 			</section>
 			<section>
@@ -101,11 +101,124 @@
 				<sectiontitle>Asynchronous JavaScript and XML and Rich Internet Applications</sectiontitle>
 				<description>Although the Internet has grown drastically over the past while, it was not as always as fast as we known it to be today. Web Applications often fell behind in usability in comparsion to desktop applications. During this time, web applications were bottlenecked by synchronous requests and transactions to the server. This meant when a user interacted with something that required server processing, they essentially needed to wait until the request was met with a response. This would require the user to reload the entire page with the data from the reponse. This was often critized as the "brochure web" as a web full of hyptertext documents. 
 				</description>
-				<description>In a solution to this, Rich Internet Applications (RIAs) were invented to approximate the look, feel, and usability of desktop applications. Rich Internet Applications have two key attributes - perforamnce and a rich GUI (Graphic User Interface). RIAs are largely contributed by Asynchronous JavaScript and XML or Ajax for short. Ajax separates the client-side and server-side so they can run in parallel. This greatly improves perforamnce with the assistance of client-side scripting to make web applications more responsive and reducing the delays of server-side processing. This way, when the user receives a response from the server, the client does not need to wait and can do other things on their side. In addition, the client-side does not need to always refresh the page when data is received from the server making it have a similar feel to desktop applications.
+				<description>In a solution to this, Rich Internet Applications (RIAs) were invented to approximate the look, feel, and usability of desktop applications. Rich Internet Applications have two key attributes - performance and a rich GUI (Graphic User Interface). RIAs are largely contributed by Asynchronous JavaScript and XML or Ajax for short. Ajax separates the client-side and server-side so they can run in parallel. This greatly improves performance with the assistance of client-side scripting to make web applications more responsive and reducing the delays of server-side processing. This way, when the user receives a response from the server, the client does not need to wait and can do other things on their side. In addition, the client-side does not need to always refresh the page when data is received from the server making it have a similar feel to desktop applications.
 				</description>
 				<description>So how does JavaScript manage interactions with the server? This is commonly handled by the XMLHttpRequest object - XHR. In a more detailed explaination, when the user interacts with the page that requires a response from the server, a XMLHttpRequest object is created with the correct request. This request is asynchronous and is send off with the correct information it needs to entail a response. Since this request is asynchronous, the user can continue interacting with the application. Once the request is received from the server, a response is generated and the XMLHttpRequest object that was created earlier now needs to be processed by the client. A function known as a callback function is used for partial page updates and define how the request will be processed. Once the data is processed, the application can update the page. Multiple requests can be handled and requested concurrently creating a RIA.
 				</description>
 			</section>
 		</unit>
 	</units>
+	<quizes>
+		<quiz>
+			<question>
+				<query>Which of the following is a correct statement about HTML5?</query>
+				<answer correct = "">HTML5 is a object-orientated language that specifies the structure and content of documents displayed in web browsers</answer>
+				<answer correct = "">HTML5 is a markup language that specifies only the content of documents displayed in web browsers</answer>
+				<answer correct = "*">HTML5 is a markup language that specifies the structure and content of documents displayed in web browsers</answer>
+				<answer correct = "">HTML5 is a object-orientated language that specifies only the content of documents displayed in web browsers</answer>
+			</question>
+			<question>
+				<query>Which of the following elements do not require an end tag?</query>
+				<answer correct = "">p</answer>
+				<answer correct = "">a</answer>
+				<answer correct = "*">img</answer>
+				<answer correct = "">table</answer>
+			</question>
+			<question>
+				<query>What are the td tags used for?</query>
+				<answer correct = "">Defining column data for the thead</answer>
+				<answer correct = "*">Defining column data for the tbody</answer>
+				<answer correct = "">Defining column data for the tfoot</answer>
+				<answer correct = "">Defining column data for the trow</answer>
+			</question>
+			<question>
+				<query>When defining a CSS document the ".name" refers to the _____ having a value of name</query>
+				<answer correct = "">id</answer>
+				<answer correct = "">name</answer>
+				<answer correct = "">tag</answer>
+				<answer correct = "*">class</answer>
+			</question>
+			<question>
+				<query>Defining more than one font-family will have the following effect:</query>
+				<answer correct = "">Cause a altering pattern of font-family on elements defined afterwards</answer>
+				<answer correct = "">Cause the program to pick the most popular one</answer>
+				<answer correct = "">Cause the program to pick from last to first depending if the font-family is available</answer>
+				<answer correct = "*">Cause the program to pick from first to last depending if the font-family is available</answer>
+			</question>
+		</quiz>
+		<quiz>
+			<question>
+				<query>Which of the following is a correct statement about JavaScript?</query>
+				<answer correct = "">JavaScript is a single-platform object-orientated scripting language used to enhance the functionality and appearance of web pages</answer>
+				<answer correct = "">JavaScript can be embedded into a HTML5 within the body of the HTML5 document</answer>
+				<answer correct = "*">JavaScript is referred to as a loosely typed language</answer>
+				<answer correct = "">JavaScript can be defined with an inline-style, embedded, and as an external file</answer>
+			</question>
+			<question>
+				<query>Which of the following is correct?</query>
+				<answer correct = "*">The document object refers to the current HTML5 document that the browser is currently displaying</answer>
+				<answer correct = "">The window object refers to the current HTML5 document that the browser is currently displaying</answer>
+				<answer correct = "">The document object has a altert and prompt method</answer>
+				<answer correct = "">The window object does not have access to the write method, but it does have access to the writeln method</answer>
+			</question>
+			<question>
+				<query>What is false about the Document Object Model?</query>
+				<answer correct = "">The Document Object Model can be described as a tree-structure</answer>
+				<answer correct = "*">The root node is known to be at the bottom of the tree</answer>
+				<answer correct = "">Elements from HTML5 can be found using their unique id in JavaScript</answer>
+				<answer correct = "">The Document Object Model gives you scripting access to all elements on a web page</answer>
+			</question>
+			<question>
+				<query>What is the correct definition for the first 2 arguments in addEventListener</query>
+				<answer correct = "">function, event</answer>
+				<answer correct = "*">event, function</answer>
+				<answer correct = "">load, event</answer>
+				<answer correct = "">start, function</answer>
+			</question>
+			<question>
+				<query>Which of the following are not mouse events</query>
+				<answer correct = "">mousemove</answer>
+				<answer correct = "*">mouseunder</answer>
+				<answer correct = "">mouseover</answer>
+				<answer correct = "">mouseout</answer>
+			</question>
+		</quiz>
+		<quiz>
+			<question>
+				<query>XML is short for...</query>
+				<answer correct = "">Extendable Markup Language</answer>
+				<answer correct = "">Extreme Mathematic Language</answer>
+				<answer correct = "*">Extensible Markup Language</answer>
+				<answer correct = "">Xenon Markup language</answer>
+			</question>
+			<question>
+				<query>Which of the following is correct?</query>
+				<answer correct = "">Document Type Definitions can check against character types</answer>
+				<answer correct = "">Schemas are less flexible than DTDs</answer>
+				<answer correct = "">Document Type Definitions are expressed using XML language</answer>
+				<answer correct = "*">An XML document may be well-formed, but not valid</answer>
+			</question>
+			<question>
+				<query>Extensible Stylesheet Language is made of what 3 technologies?</query>
+				<answer correct = "">XSL-FO, XPath, and XSL-FA</answer>
+				<answer correct = "">XSL-FO, XPath, and XSLT</answer>
+				<answer correct = "">XSL-FA, XPath, and XSLT</answer>
+				<answer correct = "*">Schema, XPath, and XSLT</answer>
+			</question>
+			<question>
+				<query>Which of the following objects are used by JavaScript to handle requests to servers?</query>
+				<answer correct = "">Connection</answer>
+				<answer correct = "">SchemaHttpRequest</answer>
+				<answer correct = "*">XMLHttpRequest</answer>
+				<answer correct = "">XMLConnectionRequest</answer>
+			</question>
+			<question>
+				<query>What are the two key components in Ajax?</query>
+				<answer correct = "">JavaScript and DTDs</answer>
+				<answer correct = "*">JavaScript and XML</answer>
+				<answer correct = "">RIA and a rich GUI</answer>
+				<answer correct = "">XML and a rich GUI</answer>
+			</question>
+		</quiz>
+	</quizes>
 </tutorial>
