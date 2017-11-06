@@ -23,7 +23,7 @@ body {
 }
 
 .navigation > li {
-	display:inline-block;
+	display: inline-block;
 	padding: 0 3ex 0 3ex;
 	font-size: 3ex;
 }
@@ -31,7 +31,6 @@ body {
 .navigation > li:last-child {
 	display: inline-block;
 	padding: 0 6ex 0 3ex;
-	font-size: 3ex;
 }
 
 .navigation > li:hover {
@@ -44,13 +43,17 @@ body {
 	font-size: 4ex;
 	font-style: bold;
 	padding-left: 2ex;
-	padding-top: 0ex;
 }
 
 .banner {
 	width: 100%;
 	display: block;
-	float: left;
+	padding: 6ex 0 0 0;
+}
+
+.banner_image {
+	width: 100%;
+	display: block;
 }
 
 div.tabbed {
