@@ -72,11 +72,48 @@ function processResponse() {
 				output.appendChild(description_entry);
 			}
 		}
+
+		// get the placeholder div name quiz
+		output = document.getElementById("quiz");
+
+		var quizes = asyncRequest.responseXML.getElementsByTagName("quiz");
+		quizes = quizes[unit_number].children;
+
+		for (var i = 0; i < quizes.length; ++i) {
+
+			var question = quizes[i].children;
+
+			// Create a h4 element for each question title
+			var question_title = document.createElement("h4");
+
+			question_title.id = "questiontitle_" + i;
+			question_title.innerHTML = question[0].innerHTML;
+			output.appendChild(question_title);
+
+			for (var j = 1; j < question.length; ++j) {
+
+				// Create an input element for each answer
+				var answer_entry = document.createElement("input");
+				answer_entry.id = "q_" + i + "_a" + j;
+				answer_entry.setAttribute("class", "answer_radio");
+				answer_entry.setAttribute("type", "radio");
+				answer_entry.setAttribute("name", "question" + i);
+				answer_entry.setAttribute("value", question[j].attributes[0].value)
+				output.appendChild(answer_entry);
+
+				var text = document.createElement("label");
+				text.setAttribute("class", "answer");
+				text.innerHTML = question[j].innerHTML;
+				output.appendChild(text);
+				output.appendChild(document.createElement("br"));
+			}
+		}
 	}
 }
 
 function clearContent() {
 	document.getElementById("content").innerHTML = "";
+	document.getElementById("quiz").innerHTML = "";
 }
 
 function start() {
