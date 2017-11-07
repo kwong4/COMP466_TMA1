@@ -41,8 +41,12 @@ body {
 	color: #000000;
 	float: left;
 	font-size: 4ex;
-	font-style: bold;
+	font-weight: bold;
 	padding-left: 2ex;
+}
+
+.important {
+	font-weight: bold;
 }
 
 .banner {
@@ -53,6 +57,23 @@ body {
 
 .answer {
 	display: inline-block;
+}
+
+.submit {
+	text-align: center;
+	position: relative;
+	padding: 1ex 0 1ex 0;
+	margin: 2ex 0 2ex 0;
+	left: 50%;
+	width: 10%;
+}
+
+.highlight {
+	background-color: #73AD21;
+}
+
+.bulk {
+	padding: 1ex 0 3ex 3ex;
 }
 
 .banner_image {
@@ -68,7 +89,7 @@ ul li {
 	padding: 1ex;
 }
 
-.section_title {
+.section_portion {
 	padding-left: 3ex;
 }
 
