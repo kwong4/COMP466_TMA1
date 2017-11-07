@@ -46,6 +46,7 @@ function processResponse() {
 
 		// Get the placeholder div name content
 		var output = document.getElementById("content");
+		output.setAttribute("class", "");
 
 		// Set the title for the current unit
 		var title = document.getElementById("title");
@@ -206,8 +207,13 @@ function home() {
 	// Clear current content
 	clearContent();
 
+	// Set the title for the current unit
+	var title = document.getElementById("title");
+	title.innerHTML = "COMP 466 Tutorial";
+
 	// get the placeholder div name content
 	var output = document.getElementById("content");
+	output.setAttribute("class", "bulk");
 
 	// Create a welcoming heading title
 	var heading = document.createElement("h2");
