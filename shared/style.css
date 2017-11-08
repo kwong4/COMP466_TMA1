@@ -68,6 +68,11 @@ body {
 	width: 10%;
 }
 
+.captions {
+	text-align:center ;
+	left: 50%;
+}
+
 .highlight {
 	background-color: #73AD21;
 }
@@ -95,4 +100,34 @@ ul li {
 
 .description_para {
 	padding-left: 7ex;
+}
+
+.slideshow {
+	width: 50%;
+}
+
+.rectangle {
+	width:100%;
+	height:100px;
+	border:1px solid #000000;
+	background-color: #000000;
+}
+
+.outer_box {
+	width:80%;
+	height:80%;
+	margin:0 auto;
+	position:relative
+	border:1px solid #000000;
+}
+
+.inner_box {
+	width:40%;
+	height:40%;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	border: 1px solid #000000
 }
