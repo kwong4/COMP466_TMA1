@@ -32,6 +32,27 @@
 
 		<div id = "box" class = "outer_box">
 			<canvas id = "myimage" class = "inner_box"></canvas>
+			<p id = "caption" class = "captions"></p>
+		</div>
+
+		<div id = "box2">
+			<ul class = "control_menu">
+				<li>
+					<select id = "alterations" name = "transformations">
+						<option selected value = "0">No Transformations</option>
+						<option value = "1">Grayscale</option>
+						<option value = "2">Partial Transparency</option>
+						<option value = "3">Darkened</option>
+						<option value = "4">Brightened</option>
+						<option value = "5">Spotlights!</option>
+					</select>
+				</li>
+				<li><button class = "control_menu" id = "backwards"type = "button">Backwards</button></li>
+				<li><button class = "control_menu" id = "control" type = "button">Start</button></li>
+				<li><button class = "control_menu" id = "forward" type = "button">Forward</button></li>
+				<li><input id = "radio1" type = "radio" name = "order" value = "0" checked> Sequential
+					<input id = "radio2" type = "radio" name = "order" value = "1"> Random</li>
+			</ul>
 		</div>
 	</body>
 </html>

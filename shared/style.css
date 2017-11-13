@@ -131,3 +131,27 @@ ul li {
     display: block;
 	border: 1px solid #000000
 }
+
+.control_menu {
+	background-color: #ffffff;
+	border-width: 1ex;
+	border-color: #000000;
+	color: #000000;
+	list-style: none;
+	text-align: center;
+	padding: 3ex 3ex 3ex 3ex;
+}
+
+.control_menu > li {
+	display: inline-block;
+	padding: 0 3ex 0 3ex;
+	font-size: 3ex;
+}
+
+.control_menu > li:last-child {
+	text-align: left;
+}
+
+.hidden {
+	display: none;
+}
