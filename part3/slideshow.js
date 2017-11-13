@@ -186,10 +186,6 @@ function action_change(radio) {
 	}
 }
 
-function processImage(img_context, redPercent, greenPercent, bluePercent) {
-
-}
-
 // Initial setup function
 function start() {
 	getContent("images.xml");

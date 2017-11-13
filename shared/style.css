@@ -155,3 +155,27 @@ ul li {
 .hidden {
 	display: none;
 }
+
+.select_menu {
+	font-size: 3ex;
+}
+
+.box_curr_unit {
+	border-color: #000000;
+	border-width: 1ex;
+	border-style: solid;
+	display: inline-block;
+	margin: 5ex;
+	padding: 3ex;
+}
+
+.submit_conversion {
+	background-color: #ffffff;
+	margin-left: 41ex;
+	border-width: 1ex;
+	border-color: #000000;
+	color: #000000;
+	list-style: none;
+	text-align: center;
+	padding: 3ex 3ex 3ex 3ex;
+}
