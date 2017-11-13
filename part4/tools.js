@@ -161,6 +161,30 @@ function create_unit_converter() {
 	converted_content.appendChild(curr_converted_unit);
 }
 
+function convert_it() {
+	var curr_unit_input = document.getElementById("curr_unit_input");
+	
+	var user_input = parseFloat(curr_unit_input.value);
+	
+	if (isNaN(user_input)) {
+		alert("Invalid input. Please enter a correct input");
+	}
+	else {
+		if (current_unit == 0) {
+
+		}
+		else if (current_unit == 1) {
+
+		}
+		else if (current_unit == 2) {
+
+		}
+		else {
+			
+		}
+	}
+}
+
 function update_unit_converter() {
 	var select_menu = document.getElementsByName("tool_menu");
 	previous_unit = current_unit;
@@ -201,6 +225,10 @@ function converter() {
 
 	var paragraph = document.createElement("p");
 	paragraph.innerHTML = "4.  The result should be shown under <em>Converted Measurement</em>";
+	output.appendChild(paragraph);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "Note - <em>Any Non-Numeric characters after valid numeric characters will be ignorged</em>";
 	output.appendChild(paragraph);
 
 	var line_break = document.createElement("br");
@@ -257,6 +285,7 @@ function converter() {
 	submit_conversion.setAttribute("type", "button");
 	submit_conversion.setAttribute("class", "submit_conversion");
 	submit_conversion.innerHTML = "Submit";
+	submit_conversion.addEventListener("click", convert_it, false)
 	output.appendChild(submit_conversion);
 
 	create_unit_converter();
