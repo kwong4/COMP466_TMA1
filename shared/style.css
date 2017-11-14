@@ -169,7 +169,7 @@ ul li {
 	padding: 3ex;
 }
 
-.submit_conversion {
+.submit_it {
 	background-color: #ffffff;
 	margin-left: 41ex;
 	border-width: 1ex;
@@ -178,4 +178,19 @@ ul li {
 	list-style: none;
 	text-align: center;
 	padding: 3ex 3ex 3ex 3ex;
+}
+
+.calculate_it {
+	background-color: #ffffff;
+	margin-left: 25ex;
+	border-width: 1ex;
+	border-color: #000000;
+	color: #000000;
+	list-style: none;
+	text-align: center;
+	padding: 3ex 3ex 3ex 3ex;
+}
+
+.input_aligned {
+	float: right;
 }

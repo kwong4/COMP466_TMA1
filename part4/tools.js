@@ -263,7 +263,7 @@ function converter() {
 	output.appendChild(title);
 
 	var paragraph = document.createElement("p");
-	paragraph.innerHTML = "1.  To use the Unit Converter. Select the desired Unit Metric under <em>Current Unit:</em>";
+	paragraph.innerHTML = "1.  To use the Unit Converter, Select the desired Unit Metric under <em>Current Unit:</em>";
 	output.appendChild(paragraph);
 
 	var paragraph = document.createElement("p");
@@ -334,12 +334,122 @@ function converter() {
 	var submit_conversion = document.createElement("button");
 	submit_conversion.id = "submit_conversion";
 	submit_conversion.setAttribute("type", "button");
-	submit_conversion.setAttribute("class", "submit_conversion");
+	submit_conversion.setAttribute("class", "submit_it");
 	submit_conversion.innerHTML = "Submit";
-	submit_conversion.addEventListener("click", convert_it, false)
+	submit_conversion.addEventListener("click", convert_it, false);
 	output.appendChild(submit_conversion);
 
 	create_unit_converter();
+}
+
+function create_mortgage_calculator() {
+	var mortgage_content = document.getElementById("mortgage_content");
+	mortgage_content.innerHTML = "";
+
+	var heading = document.createElement("h3");
+	heading.innerHTML = "Mortgage Calculator";
+	mortgage_content.appendChild(heading);
+
+	var input_title = document.createElement("label");
+	input_title.innerHTML = "House Price (before Down Payment): ";
+	mortgage_content.appendChild(input_title);
+	
+	var curr_input_title = document.createElement("input");
+	curr_input_title.setAttribute("type", "text");
+	curr_input_title.id = "house_price";
+	mortgage_content.appendChild(curr_input_title);
+
+	var line_break = document.createElement("br");
+	mortgage_content.appendChild(line_break);
+
+	var input_title = document.createElement("label");
+	input_title.innerHTML = "Down Payment: ";
+	mortgage_content.appendChild(input_title);
+	
+	var curr_input_title = document.createElement("input");
+	curr_input_title.setAttribute("type", "text");
+	curr_input_title.id = "down_payment";
+	mortgage_content.appendChild(curr_input_title);
+
+	var line_break = document.createElement("br");
+	mortgage_content.appendChild(line_break);
+
+	var input_title = document.createElement("label");
+	input_title.innerHTML = "Mortgage Rate (%): ";
+	mortgage_content.appendChild(input_title);
+	
+	var curr_input_title = document.createElement("input");
+	curr_input_title.setAttribute("type", "text");
+	curr_input_title.id = "mortgage_rate";
+	mortgage_content.appendChild(curr_input_title);
+
+	var line_break = document.createElement("br");
+	mortgage_content.appendChild(line_break);
+
+	var input_title = document.createElement("label");
+	input_title.innerHTML = "Term Length (Years): ";
+	mortgage_content.appendChild(input_title);
+	
+	var curr_input_title = document.createElement("input");
+	curr_input_title.setAttribute("type", "text");
+	curr_input_title.id = "term_length";
+	mortgage_content.appendChild(curr_input_title);
+}
+
+function mortgage_it() {
+
+	var house_price = parseFloat(document.getElementById("house_price").value);
+	var down_payment = parseFloat(document.getElementById("down_payment").value);
+	var mortgage_rate = parseFloat(document.getElementById("mortgage_rate").value);
+	var term_length = parseInt(document.getElementById("term_length").value);
+
+	if (isNaN(house_price)) {
+		alert("Invalid House Price");
+	}
+	else if (isNaN(down_payment)) {
+		alert("Invalid Down Payment");
+	}
+	else if (isNaN(mortgage_rate)) {
+		alert("Invalid Mortgage Rate");
+	}
+	else if (isNaN(term_length)) {
+		alert("Invalid Term Length");
+	}
+	else {
+		var mortgage_result = document.getElementById("mortgage_result");
+		mortgage_result.setAttribute("class", "box_curr_unit");
+		mortgage_result.innerHTML = "";
+
+		var heading = document.createElement("h3");
+		heading.innerHTML = "Mortgage Results";
+		mortgage_result.appendChild(heading);
+
+		var loan_amount = (house_price - down_payment);
+
+		var paragraph = document.createElement("p");
+		paragraph.innerHTML = "Loan Amount: $ " + loan_amount.toFixed(2);
+		mortgage_result.appendChild(paragraph);
+
+		var interest_per_month = mortgage_rate / 12 / 100;
+
+		var monthly_payment = (loan_amount * Math.pow(1 + interest_per_month, term_length * 12) * interest_per_month) / (Math.pow(1 + interest_per_month, term_length * 12) - 1);
+
+		var paragraph = document.createElement("p");
+		paragraph.innerHTML = "Loan Length: (Years) " + term_length;
+		mortgage_result.appendChild(paragraph);
+
+		var paragraph = document.createElement("p");
+		paragraph.innerHTML = "Monthly Payment: $ " + monthly_payment.toFixed(2);
+		mortgage_result.appendChild(paragraph);
+
+		var paragraph = document.createElement("p");
+		paragraph.innerHTML = "Total Interest Paid: $ " + (monthly_payment * 12 * term_length - loan_amount).toFixed(2);
+		mortgage_result.appendChild(paragraph);
+
+		var paragraph = document.createElement("p");
+		paragraph.innerHTML = "Total Price Paid: $ " + (monthly_payment * 12 * term_length + down_payment).toFixed(2);
+		mortgage_result.appendChild(paragraph);
+	}
 }
 
 function mortgage() {
@@ -348,6 +458,48 @@ function mortgage() {
 	// Set the title for the current tool
 	var title = document.getElementById("title");
 	title.innerHTML = "COMP 466 Mortgage Calculator";
+
+	// get the placeholder div name content
+	var output = document.getElementById("content");
+	output.setAttribute("class", "bulk");
+
+	var title = document.createElement("h3");
+	title.innerHTML = "Instructions: ";
+	output.appendChild(title);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "1.  To use the Mortgage Calculator, Enter the required fields with valid inputs";
+	output.appendChild(paragraph);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "<em>Note: Any Non-Numeric characters after valid numeric characters will be ignorged</em>";
+	output.appendChild(paragraph);
+
+	var line_break = document.createElement("br");
+	output.appendChild(line_break);
+
+	var mortgage_content = document.createElement("div");
+	mortgage_content.id = "mortgage_content";
+	mortgage_content.setAttribute("class", "box_curr_unit");
+	output.appendChild(mortgage_content);
+
+	var mortgage_result = document.createElement("div");
+	mortgage_result.id = "mortgage_result";
+	mortgage_result.setAttribute("class", "hidden");
+	output.appendChild(mortgage_result);
+
+	var line_break = document.createElement("br");
+	output.appendChild(line_break);
+
+	var submit_mortgage = document.createElement("button");
+	submit_mortgage.id = "submit_mortgage";
+	submit_mortgage.setAttribute("type", "button");
+	submit_mortgage.setAttribute("class", "calculate_it");
+	submit_mortgage.innerHTML = "Calculate Mortgage";
+	submit_mortgage.addEventListener("click", mortgage_it, false);
+	output.appendChild(submit_mortgage);
+
+	create_mortgage_calculator();
 }
 
 function gpa() {
