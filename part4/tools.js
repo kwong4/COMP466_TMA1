@@ -529,6 +529,7 @@ function add_course() {
 	course_div.appendChild(course);
 
 	var curr_select_input = document.createElement("select");
+	curr_select_input.setAttribute("name", "curr_select_input_" + course_number);
 
 	for (var i = 0; i < course_grades.length; ++i) {
 		var grade = document.createElement("option");
@@ -588,7 +589,49 @@ function create_gpa_calculator() {
 }
 
 function calc_gpa() {
+	var valid = true;
+	var credit_total = 0;
+	var grade_total = 0;
 
+	for (var i = 0; i < course_number; ++i) {
+		var course = document.getElementById("curr_course_input_" + i);
+		if (course.value == "") {
+			break;
+		}
+		else {
+			var credit = document.getElementById("curr_course_credit_" + i);
+			credit = parseFloat(credit.value);
+			if (isNaN(credit)) {
+				valid = false;
+				break;
+			}
+			else {
+				credit_total += credit;
+				var grade = document.getElementsByName("curr_select_input_" + i);
+				grade = grade[0].value;
+				grade_total += grade * credit;
+			}
+		}
+	}
+
+	if (credit_total == 0) {
+		valid = false;
+	}
+
+	if (valid) {
+		var final_gpa = (grade_total / credit_total).toFixed(2);
+		var gpa_result = document.getElementById("gpa_result");
+		gpa_result.innerHTML = "";
+		gpa_result.setAttribute("class", "box_curr_unit");
+
+		var header2 = document.createElement("h2");
+		header2.innerHTML = "GPA: " + final_gpa;
+
+		gpa_result.appendChild(header2);
+	}
+	else {
+		alert("Invalid Credit Entry. Please try again.");
+	}
 }
 
 function gpa() {
@@ -631,6 +674,11 @@ function gpa() {
 	gpa_content.id = "gpa_content";
 	gpa_content.setAttribute("class", "box_curr_unit");
 	output.appendChild(gpa_content);
+
+	var gpa_result = document.createElement("div");
+	gpa_result.id = "gpa_result";
+	gpa_result.setAttribute("class", "hidden");
+	output.appendChild(gpa_result);
 
 	var line_break = document.createElement("br");
 	output.appendChild(line_break);
