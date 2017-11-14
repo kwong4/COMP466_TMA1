@@ -10,9 +10,49 @@ var previous_unit;
 var current_unit = 0;
 var units = ["Weight", "Length", "Area", "Volume"];
 var lengths = ["Meter", "Kilometer", "Centimeter", "Millimeter", "Nanometer", "Mile", "Yard", "Foot", "Inch"];
-var weights = ["Kilogram", "Gram", "Milligram", "Metric Ton", "Long Ton", "Short Ton", "Short Ton", "Pound", "Ounce", "Carrat"];
-var areas = ["Square Meter", "Square Kilometer", "Square Millimeter", "Square Micrometer", "Hectare", "Square Mile", "Square Yard", "Square Foot", "Square Inch"];
-var volumes = ["Cubic Meter", "Cubic Kilometer", "Cubic Centimeter", "Cubic Millimeter", "Liter", "Milliliter"];
+var weights = ["Kilogram", "Gram", "Milligram", "Tonne", "Pound", "Ounce"];
+var areas = ["Square Meter", "Square Kilometer", "Square Mile", "Square Yard", "Square Foot", "Square Inch", "Hectare", "Acre"];
+var volumes = ["Cubic Meter", "Cubic Foot", "Cubic Inch", "Liter", "Milliliter"];
+
+var length_conversion = [
+[1, 0.001, 100, 1000, 1000000000, 0.000621371, 1.09361, 3.28084, 39.3701],
+[1000, 1, 100000, 1000000, 1000000000000, 0.621371, 1093.61, 3280.84, 39370.1],
+[0.01, 0.00001, 1, 10, 1000000, 0.00000621371, 0.0109361, 0.0328084, 0.393701],
+[0.001, 0.000001, 0.1, 1, 1000000, 0.000000621371, 0.00109361, 0.00328084, 0.0393701],
+[0.000000001, 0.000000000001, 0.0000001, 0.000001, 1, 0.000000000000621371, 0.00000000109361, 0.00000000328084, 0.0000000393701],
+[1609.34, 1.60934, 160934, 1609340, 1609340000000, 1, 1760, 5280, 63360],
+[0.9144, 0.0009144, 91.44, 914.4, 914400000, 0.000568182, 1, 3, 36],
+[0.3048, 0.0003048, 30.48, 304.8, 304800000, 0.000189394, 0.333333, 1, 12],
+[0.0254, 0.0000254, 2.54, 25.4, 25400000, 0.000015783, 0.0277778, 0.0833333, 1]
+];
+
+var weight_conversion = [
+[1, 1000, 1000000, 0.001, 2.20462, 35.274],
+[0.001, 1, 1000, 0.000001, 0.00220462, 0.035274],
+[0.000001, 0.001, 1, 0.000000001, 0.00000220462, 0.000035274],
+[1000, 1000000, 1000000000, 1, 2204.62, 35274],
+[0.453592, 453.592, 453592, 0.000453592, 1, 16],
+[0.0283495, 28.3495, 28349.5, 0.0000283495, 0.0625, 1]
+];
+
+var area_conversion = [
+[1, 0.000001, 0.0000003561, 1.19599, 10.7639, 1550, 0.0001, 0.000247105], 
+[1000000, 1, 0.386102, 1196000, 10760000, 1550000000, 100, 247.105],
+[2590000, 2.58999, 1, 3098000, 27880000, 401400000, 258.999, 640],
+[0.836127, 0.000000836127, 0.00000032283, 1, 9, 1296, 0.000083613, 0.000206612],
+[0.092903, 0.000000092903, 0.00000003587, 0.111111, 1, 144, 0.0000092903, 0.000022957],
+[0.00064516, 0.00000000064516, 0.0000000002491, 0.000771605, 0.00694444, 1, 0.000000064516, 0.00000015942],
+[10000, 0.01, 0.00386102, 11959.9, 107639, 15500000, 1, 2.47105],
+[4046.86, 0.00404686, 0.0015625, 4840, 43560, 6273000, 1]
+];
+
+var volume_conversion = [
+[1, 35.3147, 61023.7, 1000, 1000000],
+[0.0283168, 1, 1728, 28.3168, 28316.8],
+[0.000016387, 0.000578704, 1, 0.0163871, 16.3871],
+[0.001, 0.0353147, 61.0237, 1, 1000],
+[0.000001, 0.0000353147, 0.0610237, 0.001, 1]
+];
 
 // Clear the content in the page
 function clearContent() {
@@ -170,8 +210,16 @@ function convert_it() {
 		alert("Invalid input. Please enter a correct input");
 	}
 	else {
-		if (current_unit == 0) {
 
+		var curr_measurement = document.getElementsByName("curr_unit");
+		curr_measurement = curr_measurement[0].value;
+
+		var conv_measurement = document.getElementsByName("curr_converted_unit");
+		conv_measurement = conv_measurement[0].value;
+
+		alert("Curr: " + curr_measurement + " Conv: " + conv_measurement);
+		if (current_unit == 0) {
+			
 		}
 		else if (current_unit == 1) {
 
@@ -180,7 +228,7 @@ function convert_it() {
 
 		}
 		else {
-			
+
 		}
 	}
 }
@@ -228,7 +276,7 @@ function converter() {
 	output.appendChild(paragraph);
 
 	var paragraph = document.createElement("p");
-	paragraph.innerHTML = "Note - <em>Any Non-Numeric characters after valid numeric characters will be ignorged</em>";
+	paragraph.innerHTML = "<em>Note - Any Non-Numeric characters after valid numeric characters will be ignorged</em>";
 	output.appendChild(paragraph);
 
 	var line_break = document.createElement("br");
