@@ -211,25 +211,28 @@ function convert_it() {
 	}
 	else {
 
+		var conv_unit_input = document.getElementById("converted_unit_input");
+
 		var curr_measurement = document.getElementsByName("curr_unit");
 		curr_measurement = curr_measurement[0].value;
 
 		var conv_measurement = document.getElementsByName("curr_converted_unit");
 		conv_measurement = conv_measurement[0].value;
 
-		alert("Curr: " + curr_measurement + " Conv: " + conv_measurement);
 		if (current_unit == 0) {
-			
+			var result = user_input * weight_conversion[curr_measurement][conv_measurement];
 		}
 		else if (current_unit == 1) {
-
+			var result = user_input * length_conversion[curr_measurement][conv_measurement];
 		}
 		else if (current_unit == 2) {
-
+			var result = user_input * area_conversion[curr_measurement][conv_measurement];
 		}
 		else {
-
+			var result = user_input * volume_conversion[curr_measurement][conv_measurement];
 		}
+
+		conv_unit_input.value = result;
 	}
 }
 
@@ -276,7 +279,7 @@ function converter() {
 	output.appendChild(paragraph);
 
 	var paragraph = document.createElement("p");
-	paragraph.innerHTML = "<em>Note - Any Non-Numeric characters after valid numeric characters will be ignorged</em>";
+	paragraph.innerHTML = "<em>Note: Any Non-Numeric characters after valid numeric characters will be ignorged</em>";
 	output.appendChild(paragraph);
 
 	var line_break = document.createElement("br");
