@@ -1,13 +1,15 @@
 /*
 COMP466 Assignment 1: Part 4 - tools.js
 Name: Kevin Wong							
-ID: 3339323								
+ID: 3339323	
+Formula : http://www.moneychimp.com/articles/finworks/fmmortgage.htm						
 */
 
 var tool_set = ["Unit Converter", "Mortgage Calculator", "GPA Calculator"];
 var current_tool;
 var previous_unit;
 var current_unit = 0;
+var course_number = 0;
 var units = ["Weight", "Length", "Area", "Volume"];
 var lengths = ["Meter", "Kilometer", "Centimeter", "Millimeter", "Nanometer", "Mile", "Yard", "Foot", "Inch"];
 var weights = ["Kilogram", "Gram", "Milligram", "Tonne", "Pound", "Ounce"];
@@ -53,6 +55,9 @@ var volume_conversion = [
 [0.001, 0.0353147, 61.0237, 1, 1000],
 [0.000001, 0.0000353147, 0.0610237, 0.001, 1]
 ];
+
+var course_grades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"];
+var course_value = [4, 4, 3.7, 3.3, 3, 2.7, 2.3, 2, 1.7, 1.3, 1, 0.7, 0];
 
 // Clear the content in the page
 function clearContent() {
@@ -502,12 +507,143 @@ function mortgage() {
 	create_mortgage_calculator();
 }
 
+function add_course() {
+	var gpa_content = document.getElementById("gpa_content");
+	var course_div = document.createElement("div");
+	course_div.id = "course_" + course_number;
+	course_div.setAttribute("class", "box_curr_course");
+
+	var course = document.createElement("label");
+	course.innerHTML = "Course Name:   ";
+
+	course_div.appendChild(course);
+
+	var curr_course_input = document.createElement("input");
+	curr_course_input.setAttribute("type", "text");
+	curr_course_input.id = "curr_course_input_" + course_number;
+	course_div.appendChild(curr_course_input);
+
+	var course = document.createElement("label");
+	course.innerHTML = "      Grade:   ";
+
+	course_div.appendChild(course);
+
+	var curr_select_input = document.createElement("select");
+
+	for (var i = 0; i < course_grades.length; ++i) {
+		var grade = document.createElement("option");
+		grade.value = course_value[i];
+		grade.innerHTML = course_grades[i];
+		curr_select_input.appendChild(grade);
+	}
+
+	course_div.appendChild(curr_select_input);
+
+	var course = document.createElement("label");
+	course.innerHTML = "      Credits:   ";
+	course_div.appendChild(course);
+
+	var curr_course_input = document.createElement("input");
+	curr_course_input.setAttribute("type", "text");
+	curr_course_input.id = "curr_course_credit_" + course_number;
+	course_div.appendChild(curr_course_input);
+
+	if (course_number != 0) {
+		var last_course = document.getElementById("course_" + (course_number - 1));
+		
+		var line_break = document.createElement("br");
+		gpa_content.insertBefore(line_break, last_course.nextSibling);
+
+		gpa_content.insertBefore(course_div, last_course.nextSibling.nextSibling);
+	}
+	else {
+		gpa_content.appendChild(course_div);
+	}
+	course_number++;
+}
+
+function create_gpa_calculator() {
+	var gpa_content = document.getElementById("gpa_content");
+	gpa_content.innerHTML = "";
+
+	var heading = document.createElement("h3");
+	heading.innerHTML = "GPA Calculator";
+	gpa_content.appendChild(heading);
+
+	for (var i = 0; i < 4; ++i) {
+		add_course();
+	}
+
+	var line_break = document.createElement("br");
+	gpa_content.appendChild(line_break);
+
+	var add_button = document.createElement("button");
+	add_button.id = "add_course";
+	add_button.setAttribute("type", "button");
+	add_button.setAttribute("class", "add_course");
+	add_button.innerHTML = "Add Another Course";
+	add_button.addEventListener("click", add_course, false);
+
+	gpa_content.appendChild(add_button);
+}
+
+function calc_gpa() {
+
+}
+
 function gpa() {
 	clearContent();
+
+	course_number = 0;
 
 	// Set the title for the current tool
 	var title = document.getElementById("title");
 	title.innerHTML = "COMP 466 GPA Calculator";
+
+	// get the placeholder div name content
+	var output = document.getElementById("content");
+	output.setAttribute("class", "bulk");
+
+	var title = document.createElement("h3");
+	title.innerHTML = "Instructions: ";
+	output.appendChild(title);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "1.  To use the GPA Calculator, Enter the required fields with valid inputs";
+	output.appendChild(paragraph);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "2.  Only Courses with Course Names will be considered";
+	output.appendChild(paragraph);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "3.  Feel free to add any additional courses if needed.";
+	output.appendChild(paragraph);
+
+	var paragraph = document.createElement("p");
+	paragraph.innerHTML = "<em>Note: Any Non-Numeric characters after valid numeric characters will be ignorged if the field was meant for numbers</em>";
+	output.appendChild(paragraph);
+
+	var line_break = document.createElement("br");
+	output.appendChild(line_break);
+
+	var gpa_content = document.createElement("div");
+	gpa_content.id = "gpa_content";
+	gpa_content.setAttribute("class", "box_curr_unit");
+	output.appendChild(gpa_content);
+
+	var line_break = document.createElement("br");
+	output.appendChild(line_break);
+
+	var submit_gpa = document.createElement("button");
+	submit_gpa.id = "submit_gpa";
+	submit_gpa.setAttribute("type", "button");
+	submit_gpa.setAttribute("class", "calculate_it");
+	submit_gpa.innerHTML = "Calculate GPA";
+	submit_gpa.addEventListener("click", calc_gpa, false);
+	output.appendChild(submit_gpa);
+
+	create_gpa_calculator();
 }
 
 // Initial setup function
