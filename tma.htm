@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<!-- COMP466 Assignment 1: tma.htm														  -->
+<!-- Name: Kevin Wong							 										  -->
+<!-- ID: 3339323								 										  -->
+<!-- Source picture from https://pixabay.com/en/binary-binary-code-binary-system-2910663/ -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COMP 466 Main Page</title>
+		<link rel = "stylesheet" type = "text/css" href = "shared/style.css">
+		<script src = "tma.js"></script>
+	</head>
+
+	<body>
+
+		<!-- Title + Banner -->
+		<ul class = "navigation">
+
+			<!-- Section Title -->
+			<div id = "title" class = "title">
+				COMP 466 Main Page
+			</div>
+
+			<!-- Banner -->
+			<li id = "home">Home</li>
+			<li id = "tab_1">XML Resume</li>
+			<li id = "tab_2">Tutorial</li>
+			<li id = "tab_3">Slideshow</li>
+			<li id = "tab_4">Utility Tools</li>
+
+			<!-- Banner image -->
+			<div class = "banner">
+				<img class = "banner_image" src = "shared/banner_img_2.jpg">
+			</div>
+		</ul>
+
+		<!-- Home Page-->
+		<div class = "bulk" id = "home_content">
+			<h2>Assignment Cover Page</h2>
+			<p>Assignment Number: <strong>1</strong></p>
+			<p>Course Name: <strong>COMP 466 - Advanced Technologies for Web-Based Systems</strong></p>
+			<p>Name: <strong>Kevin Wong</strong></p>
+			<p>Student ID: <strong>3339323</strong></p>
+			<p>Date Started on Assignment : <strong>Nov. 7, 2017</strong></p>
+			<p>Date Completed : <strong>Nov. 14, 2017</strong></p>
+			<p>Estimated Hours Spent on Assignment: <strong>55 Hours</strong></p>
+		</div>
+
+		<!-- XML Resume-->
+		<div class = "assignment_parts" id = "resume_content">
+			<h2><a href = "part1/resume.xml">XML Resume Application</a></h2>
+			<hr/>
+			<h3>Requirements:</h3>
+			<p>Create an XML version of your resume containing at least three sections: general information about you; your educational background, and your work experience. Create a schema for the XML document, and then create an XSLT for the XML document so that it can be rendered in a browser.</p>
+
+			<hr/>
+			<h3>Interpretation of Assignment:</h3>
+			<p>My interpretation of this assignment was to convert my resume to a XML version of it. This XML version was suppose to follow a schema version of it and finally have a XSLT to transform the XML into a document that could be rendered in the browser.</p>
+
+			<hr/>
+			<h3>Analysis, Design, and Implementation</h3>
+			<p>In my analysis, I first took a copy of my Resume, then broke down each section of the resume into a element into XML such as generalinfo, academicinfo, workexperience, and additionalinfo. Afterwards I took each bullet point or subsection that were similar and matched them accordingly. For example the experience element under work experience. While building this, I kept in mind a schema outline which helped me design the schema afterwards. Then I referenced XSLT examples in the textbook to produce a rendered result.</p>
+
+			<hr/>
+			<h3>Guide</h3>
+			<p>The guide for this part is simple as to view the rendered result just launch the xml file in the correct viewer</p>
+
+			<hr/>
+			<h2><a href = "part1">Source Files</a></h2>
+		</div>
+
+		<!-- Tutorial-->
+		<div class = "assignment_parts" id = "tutorial_content">
+			<h2><a href = "part2/tutorial.html">Tutorial Application</a></h2>
+			<hr/>
+			<h3>Requirements:</h3>
+			<p>Using the web technologies you have learned so far, including HTML5, CSS3, JavaScript, XML and Ajax, write a web application, that can help people to learn the technologies covered in Unit 1, Unit 2, or Unit 3 of the course. The requirements are detailed as follows:</p>
+
+			<ol>
+				<li>It must be a web-based system with a name you choose, a banner to show off your work, navigation menus and buttons. It should begin with a welcome page to greet the users, to explain what the application does, and what they get from it, and how they should proceed.</li>
+				<li>The application must have three pages of tutorials, accessible through navigation menus or buttons, to teach the technologies covered in Unit 1, Unit 2 and Unit 3 respectively. You don’t need to teach everything, but there should be enough content to make each of the tutorials useful.</li>
+				<li>There should be a quiz for each tutorial, which can be accessed right after the tutorial page, as well as through the navigation menus and buttons of the system.</li>
+				<li>After the submission button is hit, the quiz system should be able to grade the answers the learner has provided, show the correct answers as well as the score in percentage.</li>
+				<li>The quiz system should be designed so that questions can be easily edited, added, or deleted, and new quiz can be easily created.</li>
+				<li>You should do your best to use the web technologies covered in Unit 1, unit 2 and Unit 3, including HTML5, CSS3, JavaScript, XML and Ajax.</li>
+				<li>Your web application should use or teach at least five page-structure elements and six new input types</li>
+				<li>You should use an external style sheet for all pages of the system, to retain a consistent and user-friendly interface for your system.</li>
+				<li>When using HTML5 table, be sure that you only use it to display tabular information, not to lay out the elements on your page.</li>
+			</ol>
+
+			<hr/>
+			<h3>Interpretation of Assignment:</h3>
+			<p>My interpretation of this assignment was to create a web application geared towards presenting knowledge obtained in COMP 466's Unit 1, Unit 2, and Unit 3 course material. The web application should have a banner/GUI for the user to easily navigate each section. There should a quiz for each tutorial which will be graded after the user hits "Submit". It should then show the correct answer and percentage of the quiz. The quiz system should allow easy access to edit, delete and add. Use as much of the useful technologies learned so far (HTML5, CSS3, JavaScript, XML, and Ajax. It should use at least 5 page-structure elements or use six new input types.)</p>
+
+			<hr/>
+			<h3>Analysis, Design, and Implementation</h3>
+			<p>In my analysis and design of the program, I first had to create a system to easily capture the info of the content and questions. To me, this seemed simple because in regards to the last assignment, I could use XML to store it. Afterwards I had to create a landing page - this was my home page. I made a welcoming landing page with access to the 3 tutorials in a nice GUI. Once I had the access points, I needed to pull the information from the XML. This was a little tricky at first, however once I was able to obtain the data with XMLHttpRequest, everything started to piece together. How I was able to switch between pages was the use of a div in my initial html page which I used JavaScript to modify. Essentially clearing and writing to once the user selected a correct tab. Once they selected the tab, I let the content get displayed, while creating the quiz for each afterwards. The quiz was done using radio buttons based on the XML attributes and iteration index. Afterwards a "Submit" button was made to be linked to a function in JavaScript that read all of these inputs and calculate and highlight the results/correct answers.</p>
+
+			<hr/>
+			<h3>Guide</h3>
+			<p>The guide for this portion is as straight forward, launch the Tutorial Application, then follow the instructions on the landing page. This should lead you to select the desired tutorial, which will contain the content on its page, and a multiple choice question quiz at the bottom. Select an answer for each and hit "Submit" to find out the correct answers and your score.</p>
+
+			<hr/>
+			<h2><a href = "part2">Source Files</a></h2>
+		</div>
+
+		<!-- Slideshow-->
+		<div class = "assignment_parts" id = "slideshow_content">
+			<h2><a href = "part3/slideshow.html">Slideshow Application</a></h2>
+			<hr/>
+			<h3>Requirements:</h3>
+			<p>For this project, you are required to create a slideshow web application using HTML5 canvas and other web technologies you have learned so far. The requirements are as follows:</p>
+
+			<ol>
+				<li>The slideshow should be drawn on the canvas;</li>
+				<li>There should be a caption for each image in the show;</li>
+				<li>There should be a button to start/stop the show;</li>
+				<li>There should be a control to toggle the show between random and sequential;</li>
+				<li>There should be buttons to manually turn the show backward or forward, only if the show is in sequential mode;</li>
+				<li>There should be a dropdown list for users to select different transition/transformation effects for the show;</li>
+				<li>The data of the images should be in a JSON array so that images and their captions can be easily maintained;</li>
+				<li>To avoid copyright issues, you should use the images/photos you took. If you don’t have the images ready, please go around the place you live or work and take some good ones;</li>
+				<li>The show should have at least 20 nice pictures.</li>
+			</ol>
+
+			<hr/>
+			<h3>Interpretation of Assignment:</h3>
+			<p>My interpretation of this assignment was to create a slideshow web application which would be comprised of at least 20 of your own pictures and captions. The slideshow should be controlled by a set of controls which allow you to start/stop the show, toggle between random and sequential, and allow transformations on the picture. There should also be manual options to go forwards or backwards only available when in sequential mode. The data of the images should be in a JSON array during program usage.</p>
+
+			<hr/>
+			<h3>Analysis, Design, and Implementation</h3>
+			<p>In my analysis and design, I first compiled the images of my awesome dog(s). Afterwards I stored them externally in an XML file as it seemed the easiest to pull from to store into the JSON array rather than start out in a JSON array which could be cluttered. After the application stores the data into a JSON array, I made sure they were able to be presented in the canvas. Then I worked on designing the control system. I first created the manual control which was the base used to create the sequential slideshow. The sequential slideshow was done using a Interval timer which was added/removed based on user selection. Then I proceeded to create radio buttons to control the sequential and random movements of the slideshow. The random portion involved using Math.random and modulus. I also used the CSS stylesheet to hide the manual controls once "Random" was selected. Then what was finally needed was a dropdown select menu and show the different transformations to be applied to the image. Click EventListeners were used to check if the canvas needed to be updated.</p>
+
+			<hr/>
+			<h3>Guide</h3>
+			<p>The guide for this part is to launch the slideshow, follow the instructions, click away on the controls of the application, and enjoy a cute dog! :)</p>
+
+			<hr/>
+			<h2><a href = "part3">Source Files</a></h2>
+		</div>
+
+		<!-- Toolset-->
+		<div class = "assignment_parts" id = "toolset_content">
+			<h2><a href = "part4/tools.html">Toolset Application</a></h2>
+			<hr/>
+			<h3>Requirements:</h3>
+			<p>For this project, you are required to develop a web application that can provide users with the following utility tools:</p>
+
+			<ul>
+				<li>Measurement converter: weight, length, area and volume</li>
+				<li>Mortgage calculator</li>
+				<li>A utility tool that you think could be useful. You may need to do some research on the Web to build this last tool.</li>
+			</ul>
+
+			<p>In order to get full marks for the above design and implementation, the following are required:</p>
+
+			<ol>
+				<li>It must have an integrated and user-friendly interface for users to access each of the tools you designed.</li>
+				<li>You need to use JavaScript functions and built-in objects to implement the application.</li>
+				<li>At any time only one tool will be shown, to ensure a clean and tidy space for users to work with.</li>
+				<li>You need to use Ajax technologies to eliminate whole page update when switching from one utility to another.</li>
+				<li>You need to use event handler to calculate and show the result as soon as the user has given enough input to the system.</li>
+				<li>In the assignment report, you need to provide sufficient documentation for your work, including algorithms and formulas used for the tools. If you have used any resources, including documents on the Web, you must clearly identify the source in your documentation.</li>
+			</ol>
+
+			<hr/>
+			<h3>Interpretation of Assignment:</h3>
+			<p>My interpretation of this assignment was to create a web application that housed 3 different tools - A Measurement Converter for Weight, Length, Area, and Volume. A Mortgage Calculator, and a Utility tool that is useful (In this case a GPA Calculator). The application should have a user-friendly GUI and each tool should be seperate of each other. The tools should use Ajax technologies to operate on one webpage (updates) and have event handlers to calculate and present the result when requested.</p>
+
+			<hr/>
+			<h3>Analysis, Design, and Implementation</h3>
+			<p>In my analysis and design, I first found the formulas for the Measurement Converter (From Google Converter) <a href = "http://www.moneychimp.com/articles/finworks/fmmortgage.htm">Mortgage Calculator</a>, and <a href = "https://students.ucsd.edu/academics/exams-grades-transcripts/grades/calculate-gpa.html">GPA Calculator</a> respectively. There are instructions at the top of each page.</p>
+
+			<p>For the Measurement Converter, I first calculated and stored the respective measurement and conversions in global arrays. The conversions were calculated based on where the respective units stood in their array. The 2d array is made up of the first index being the unit to convert from, and the 2nd index being the unit to convert to. I noticed afterwards that I could have converted them into a single base unit and gone off with that, but the system had already been designed. Once the formulas were set into place, I needed to obtain the user input with a primary unit dropdown box indicting unit of measure and the units to convert in two sub boxes. These sub boxes are the initial unit and the 2nd box is the final unit/result. If an incorrect result is entered, it will notify the user.</p>
+
+			<p>For the Mortgage Calculator, I had the formula, but needed the required inputs to plug into the formula. This lead to input fields of the House Price, Down Payment, Mortgage Rate (%), and Term Light in Years. After a valid response from the user and an indication of submission ("Calculate Mortgage Button"), the inputs are plugged into the formula and the Mortgage Results are displayed in a second box to the user.</p>
+
+			<p>For the GPA Calculator, similar to the Mortgage Calculator, the formula was obtained. The tricky part was creating the GUI to obtain the results. Creating input fields and labels were simple as it mimiced the previous tools, however a dynamic button was needed to add more courses to the Calculator. Thinking back, I remembered a similar example from the textbook assigning/creating new buttons as users added more and more to it. However, I just needed it to dynamically add courses - So I kept track of the course number, used that as a reference when the user wants to add another course and used the JavaScript functionality of insertBefore and nextSibling to append the new input course line to the correct location. Afterwards I only count inputs that have a course name, which are verified, calculated, and displayed in another box once the user requests.</p>
+
+			<hr/>
+			<h3>Guide</h3>
+			<p>Just launch the Tool Web Application, navigate to the desire tool from the banner, then follow the instructions; fill in valid inputs and request a calculation.</p>
+
+			<hr/>
+			<h2><a href = "part4">Source Files</a></h2>
+		</div>
+
+	</body>
+</html>

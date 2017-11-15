@@ -52,7 +52,7 @@ function processResponse() {
 			var image_node = image_nodes[i].children;
 
 			images.slide.push({
-				"name" : "noir/" + image_node[0].innerHTML + ".jpg",
+				"name" : "../shared/noir/" + image_node[0].innerHTML + ".jpg",
 				"caption" : image_node[1].innerHTML
 			});
 		}

@@ -81,6 +81,10 @@ body {
 	padding: 1ex 0 3ex 3ex;
 }
 
+.assignment_parts {
+	padding: 1ex 3ex 3ex 3ex;
+}
+
 .banner_image {
 	width: 100%;
 	display: block;
